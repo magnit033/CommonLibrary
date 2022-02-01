@@ -9,6 +9,6 @@ import Foundation
 
 public protocol CommonSegmentedViewDelegate: AnyObject {
     
-    func didSelectSegment(segment: Int)
+    public func didSelectSegment(segment: Int)
     
 }

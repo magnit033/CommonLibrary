@@ -11,9 +11,9 @@ public class CommonSegmentedView: UISegmentedControl {
    
     // MARK: - Properties
     
-    weak var delegate: CommonSegmentedViewDelegate?
+    public weak var delegate: CommonSegmentedViewDelegate?
     
-    var viewModel: CommonSegmentedViewModel? {
+    public var viewModel: CommonSegmentedViewModel? {
         didSet {
             guard let viewModel = viewModel else {
                 return

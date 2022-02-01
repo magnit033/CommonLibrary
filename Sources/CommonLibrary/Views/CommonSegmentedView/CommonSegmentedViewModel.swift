@@ -18,7 +18,7 @@ public class CommonSegmentedViewModel: CommonSegmentedViewModelProtocol {
      
     // MARK: - CommonSegmentedViewModelProtocol
     
-    var segments: [String]
-    var initialSelected: Int
+    public var segments: [String]
+    public var initialSelected: Int
     
 }
