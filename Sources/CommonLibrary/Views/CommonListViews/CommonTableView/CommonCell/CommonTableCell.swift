@@ -55,7 +55,7 @@ open class CommonTableCell: UITableViewCell, CommonTableCellViewModelDelegate {
     
     // MARK: - To Override
     
-    public func updateView() {
+    open func updateView() {
         guard let viewModel = viewModel else {
             return
         }
@@ -64,14 +64,14 @@ open class CommonTableCell: UITableViewCell, CommonTableCellViewModelDelegate {
         self.heightConstraint?.constant = viewModel.cellHeight
     }
     
-    public func setup() {
+    open func setup() {
         
         self.heightView.backgroundColor = UIColor.clear
         self.contentView.sendSubviewToBack(self.heightView)
         self.backgroundColor = UIColor.clear
     }
     
-    public func setupLayout() {
+    open func setupLayout() {
         
         self.contentView.addSubview(self.heightView)
         self.heightView.translatesAutoresizingMaskIntoConstraints = false
