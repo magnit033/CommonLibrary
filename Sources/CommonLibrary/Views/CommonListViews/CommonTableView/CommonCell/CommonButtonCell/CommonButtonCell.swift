@@ -21,7 +21,7 @@ open class CommonButtonCell: CommonTableCell {
 
     // MARK: - IBOutlets
     
-    @objc func cellButtonAction(_ sender: Any) {
+    @objc open func cellButtonAction(_ sender: Any) {
         self.viewModel?.selectCell(object: nil)
     }
     
