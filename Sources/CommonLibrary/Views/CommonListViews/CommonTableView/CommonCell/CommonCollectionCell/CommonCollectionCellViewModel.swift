@@ -29,7 +29,7 @@ open class CommonCollectionCellViewModel: CommonTableCellViewModel {
     
     // MARK: - To override
     
-    public func configureItemViewModels() {
+    open func configureItemViewModels() {
     }
     
     // MARK: - Private
