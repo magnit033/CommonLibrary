@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CommonSegmentedViewModel: CommonSegmentedViewModelProtocol {
+public class CommonSegmentedViewModel: CommonSegmentedViewModelProtocol {
     
     // MARK: - Lifecycle
     

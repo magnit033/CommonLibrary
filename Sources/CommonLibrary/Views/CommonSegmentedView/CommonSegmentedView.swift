@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CommonSegmentedView: UISegmentedControl {
+public class CommonSegmentedView: UISegmentedControl {
    
     // MARK: - Properties
     

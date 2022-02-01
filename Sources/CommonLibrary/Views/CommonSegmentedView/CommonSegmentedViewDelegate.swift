@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CommonSegmentedViewDelegate: AnyObject {
+public protocol CommonSegmentedViewDelegate: AnyObject {
     
     func didSelectSegment(segment: Int)
     

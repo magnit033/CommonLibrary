@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CommonSegmentedViewModelProtocol {
+public protocol CommonSegmentedViewModelProtocol {
     
     var segments: [String] { get }
     var initialSelected: Int { get }
