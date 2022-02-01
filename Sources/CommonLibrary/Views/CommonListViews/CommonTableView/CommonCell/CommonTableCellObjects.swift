@@ -8,6 +8,7 @@
 import Foundation
 
 public struct CommonTableCellObjects {
-    let name: String
-    let object: Any?
+    
+    public let name: String
+    public let object: Any?
 }
