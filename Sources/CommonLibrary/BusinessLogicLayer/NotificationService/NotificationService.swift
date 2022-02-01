@@ -11,7 +11,7 @@ public class NotificationService: NotificationServiceProtocol, NotificationServi
     
     // MARK: - Properties
     
-    private var listeners = [NotificationServiceListener]()
+    public var listeners = [NotificationServiceListener]()
     
     // MARK: - NotificationServicePublisher
     
