@@ -11,7 +11,6 @@ public class CommonSearchController: UISearchController, UISearchResultsUpdating
     
     // MARK: - Properties
     
-    
     public weak var searchDelegate: CommonSearchControllerDelegate?
     
     public var viewModel: CommonSearchControllerViewModel? {
@@ -30,7 +29,9 @@ public class CommonSearchController: UISearchController, UISearchResultsUpdating
         
         self.searchResultsUpdater = self
         self.delegate = self
-        self.obscuresBackgroundDuringPresentation = false
+        if #available(iOS 9.1, *) {
+            self.obscuresBackgroundDuringPresentation = false
+        }
         self.searchBar.autocapitalizationType = .none
         self.searchBar.setValue("Отмена", forKey: "cancelButtonText")
         
@@ -42,7 +43,7 @@ public class CommonSearchController: UISearchController, UISearchResultsUpdating
     
     // MARK: - UISearchResultsUpdating
     
-    func updateSearchResults(for searchController: UISearchController) {
+    public func updateSearchResults(for searchController: UISearchController) {
         self.searchDelegate?.didEnter(string: searchController.searchBar.text ?? "")
     }
 }
