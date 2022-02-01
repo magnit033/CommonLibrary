@@ -11,7 +11,7 @@ public class NotificationService: NotificationServiceProtocol, NotificationServi
     
     // MARK: - Singlton
     
-    public let shared = NotificationService()
+    public static let shared = NotificationService()
     private init() {}
     
     // MARK: - Properties
