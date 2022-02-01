@@ -9,14 +9,17 @@ import Foundation
 
 public class NotificationService: NotificationServiceProtocol, NotificationServicePublisher {
     
+    // MARK: - Singlton
+    
+    public let shared = NotificationService()
+    private init() {}
+    
     // MARK: - Properties
     
     public var listeners = [NotificationServiceListener]()
     
     // MARK: - Lifecycle
     
-    public init() {
-    }
     
     // MARK: - NotificationServicePublisher
     
