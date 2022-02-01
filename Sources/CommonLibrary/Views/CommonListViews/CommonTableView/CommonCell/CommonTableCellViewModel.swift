@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class CommonTableCellViewModel: CommonTableCellViewModelProtocol {
+open class CommonTableCellViewModel: CommonTableCellViewModelProtocol {
     
     // MARK: - Properties
     

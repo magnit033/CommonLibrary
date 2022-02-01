@@ -8,11 +8,11 @@
 
 import UIKit
 
-public class CommonTableCell: UITableViewCell, CommonTableCellViewModelDelegate {
+open class CommonTableCell: UITableViewCell, CommonTableCellViewModelDelegate {
     
     // MARK: - Properties
     
-    public class var identifier: String {
+    open class var identifier: String {
         return "CommonThemeCell"
     }
     
@@ -36,7 +36,7 @@ public class CommonTableCell: UITableViewCell, CommonTableCellViewModelDelegate 
         self.setup()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         super.init(coder: coder)
         
         self.setupLayout()
