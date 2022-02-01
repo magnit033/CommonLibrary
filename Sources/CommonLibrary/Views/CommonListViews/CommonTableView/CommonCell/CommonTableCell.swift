@@ -45,11 +45,11 @@ open class CommonTableCell: UITableViewCell, CommonTableCellViewModelDelegate {
     
     // MARK: - CommonTableCellViewModelDelegate
     
-    public func update() {
+    open func update() {
         self.updateView()
     }
     
-    public func select(object: Any?) {
+    open func select(object: Any?) {
         self.delegate?.didSelectCell(object: object)
     }
     

@@ -25,17 +25,17 @@ open class CommonTableCellViewModel: CommonTableCellViewModelProtocol {
     public var object: CommonTableCellObjects?
     public var separatorColor: UIColor? = UIColor.clear
     
-    public var identifier: String {
+    open var identifier: String {
         return ""
     }
     
     public var cellHeight: CGFloat = 60
     
-    public func update() {
+    open func update() {
         self.delegate?.update()
     }
     
-    public func selectCell(object: Any?) {
+    open func selectCell(object: Any?) {
         self.delegate?.select(object: self.object)
     }
 }
