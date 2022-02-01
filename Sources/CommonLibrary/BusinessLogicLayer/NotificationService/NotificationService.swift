@@ -13,6 +13,11 @@ public class NotificationService: NotificationServiceProtocol, NotificationServi
     
     public var listeners = [NotificationServiceListener]()
     
+    // MARK: - Lifecycle
+    
+    public init() {
+    }
+    
     // MARK: - NotificationServicePublisher
     
     public func addListener(_ listener: NotificationServiceListener) {
