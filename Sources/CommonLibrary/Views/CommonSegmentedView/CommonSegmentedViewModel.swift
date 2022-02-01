@@ -11,7 +11,7 @@ public class CommonSegmentedViewModel: CommonSegmentedViewModelProtocol {
     
     // MARK: - Lifecycle
     
-    init(segments: [String], selected: Int) {
+    public init(segments: [String], selected: Int) {
         self.segments = segments
         self.initialSelected = selected
     }
