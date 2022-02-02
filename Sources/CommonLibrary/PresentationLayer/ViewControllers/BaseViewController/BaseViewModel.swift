@@ -61,8 +61,4 @@ open class BaseViewModel: BaseViewModelProtocol, NotificationServiceListener {
     open func handleViewDidAppear() {
     }
     
-    // MARK: - NotificationServiceListener
-    
-//    open func themesDidChanged() {
-//    }
 }
