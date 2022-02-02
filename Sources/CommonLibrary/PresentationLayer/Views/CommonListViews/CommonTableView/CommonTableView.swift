@@ -101,8 +101,15 @@ open class CommonTableView: UITableView,
         self.delegate = self
         self.dataSource = self
         
-        self.register(CommonEmptyCell.self, forCellReuseIdentifier: CommonEmptyCell.identifier)
-        self.register(CommonButtonCell.self, forCellReuseIdentifier: CommonButtonCell.identifier)
+        let types = [CommonEmptyCell.identifier: CommonEmptyCell.self,
+                     CommonButtonCell.identifier: CommonButtonCell.self]
+        
+        types.forEach({ key, value in
+            self.register(value, forCellReuseIdentifier: key)
+        })
+        
+//        self.register(CommonEmptyCell.self, forCellReuseIdentifier: CommonEmptyCell.identifier)
+//        self.register(CommonButtonCell.self, forCellReuseIdentifier: CommonButtonCell.identifier)
         self.register(CommonTitleCell.self, forCellReuseIdentifier: CommonTitleCell.identifier)
         self.register(CommonRightTitleCell.self, forCellReuseIdentifier: CommonRightTitleCell.identifier)
         self.register(CommonTextFieldCell.self, forCellReuseIdentifier: CommonTextFieldCell.identifier)
