@@ -9,5 +9,9 @@ import UIKit
 
 public protocol BaseTabBarControllerViewModelProtocol {
     
+    var tintColor: UIColor { get }
+    var uselectedTintColor: UIColor { get }
+    
     func viewControllers() -> [UIViewController]
+    
 }

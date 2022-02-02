@@ -20,6 +20,13 @@ open class BaseTabBarControllerViewModel: BaseTabBarControllerViewModelProtocol 
     
     // MARK: - BaseTabBarControllerViewModelProtocol
     
+    open var tintColor: UIColor {
+        return UIColor.systemBlue
+    }
+    open var uselectedTintColor: UIColor {
+        return UIColor.systemGray
+    }
+    
     open func viewControllers() -> [UIViewController] {
         return []
     }
