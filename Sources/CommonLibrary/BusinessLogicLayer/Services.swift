@@ -13,4 +13,9 @@ open class Services {
     private init() {
     }
     
+    // MARK: - Services
+    
+    open var navigationService: NavigationServiceProtocol {
+        return NavigationService.shared
+    }
 }
