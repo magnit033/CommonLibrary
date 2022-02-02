@@ -63,6 +63,6 @@ open class BaseViewModel: BaseViewModelProtocol, NotificationServiceListener {
     
     // MARK: - NotificationServiceListener
     
-    open func themesDidChanged() {
-    }
+//    open func themesDidChanged() {
+//    }
 }
