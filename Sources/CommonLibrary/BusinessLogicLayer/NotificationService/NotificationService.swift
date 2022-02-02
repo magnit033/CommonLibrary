@@ -21,7 +21,7 @@ open class NotificationService: NotificationServicePublisher {
     // MARK: - NotificationServicePublisher
     
     public func addListener(_ listener: NotificationServiceListener) {
-        if listeners.filter({ $0.isEqual(to: listener) }).isEmpty {
+        if listeners.filter({ self.compareListeners(first: listener, second: $0) }).isEmpty {
             listeners.append(listener)
         }
     }
@@ -29,7 +29,7 @@ open class NotificationService: NotificationServicePublisher {
     public func removeListener(_ listener: NotificationServiceListener) {
         
         for i in 0..<listeners.count {
-            if listeners[i].isEqual(to: listener) {
+            if self.compareListeners(first: listener, second: listeners[i]) {
                 listeners.remove(at: i)
                 return
             }
@@ -38,4 +38,9 @@ open class NotificationService: NotificationServicePublisher {
     
     // MARK: - NotificationServiceProtocol
     
+    // MARK: - Private
+    
+    private func compareListeners(first: NotificationServiceListener, second: NotificationServiceListener) -> Bool {
+        return first as AnyObject === second as AnyObject
+    }
 }
