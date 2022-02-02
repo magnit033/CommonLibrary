@@ -17,7 +17,7 @@ open class BaseTableViewModel: BaseViewModel, BaseTableViewModelProtocol {
     
     // MARK: - Lifecycle
     
-    override init() {
+    public override init() {
         super.init()
         self.configureCellViewModels()
     }
