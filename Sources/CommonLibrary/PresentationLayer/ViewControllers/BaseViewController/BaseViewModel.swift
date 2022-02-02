@@ -15,7 +15,7 @@ open class BaseViewModel: BaseViewModelProtocol {
     
     // MARK: - Lifecycle
     
-    open init() {
+    public init() {
         
     }
     
