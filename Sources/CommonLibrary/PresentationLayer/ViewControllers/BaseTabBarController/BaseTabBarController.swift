@@ -33,6 +33,8 @@ open class BaseTabBarController: UITabBarController, UITabBarControllerDelegate 
         guard let viewModel = viewModel else {
             return
         }
+        self.tabBar.tintColor = viewModel.tintColor
+        self.tabBar.unselectedItemTintColor = viewModel.uselectedTintColor
         self.viewControllers = viewModel.viewControllers()
     }
 }
