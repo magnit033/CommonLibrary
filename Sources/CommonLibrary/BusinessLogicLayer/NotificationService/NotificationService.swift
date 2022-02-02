@@ -16,7 +16,7 @@ open class NotificationService: NotificationServicePublisher {
     
     // MARK: - Properties
     
-    private var listeners = [NotificationServiceListener]()
+    public var listeners = [NotificationServiceListener]()
     
     // MARK: - NotificationServicePublisher
     
