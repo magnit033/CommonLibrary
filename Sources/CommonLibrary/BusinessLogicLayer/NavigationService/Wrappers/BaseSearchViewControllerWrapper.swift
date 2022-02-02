@@ -7,14 +7,14 @@
 
 import Foundation
 
-//open class BaseSearchViewControllerWrapper: ViewControllerWrapper {
-//
-//    // MARK: - Lifecycle
-//
-//    open init(viewModel: BaseSearchViewModel) {
-//        let resultVC = BaseSearchViewController()
-//        resultVC.viewModel = viewModel
-//        resultVC.modalPresentationStyle = .fullScreen
-//        super.init(viewController: resultVC)
-//    }
-//}
+open class BaseSearchViewControllerWrapper: ViewControllerWrapper {
+
+    // MARK: - Lifecycle
+
+    public init(viewModel: BaseSearchViewModel) {
+        let resultVC = BaseSearchViewController()
+        resultVC.viewModel = viewModel
+        resultVC.modalPresentationStyle = .fullScreen
+        super.init(viewController: resultVC)
+    }
+}

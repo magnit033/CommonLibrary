@@ -7,14 +7,14 @@
 
 import UIKit
 
-//open class BaseTableViewControllerWrapper: ViewControllerWrapper {
-//    
-//    // MARK: - Lifecycle
-//    
-//    open init(viewModel: BaseTableViewModel) {
-//        let resultVC = BaseTableViewController()
-//        resultVC.viewModel = viewModel
-//        resultVC.modalPresentationStyle = .fullScreen
-//        super.init(viewController: resultVC)
-//    }
-//}
+open class BaseTableViewControllerWrapper: ViewControllerWrapper {
+    
+    // MARK: - Lifecycle
+    
+    public init(viewModel: BaseTableViewModel) {
+        let resultVC = BaseTableViewController()
+        resultVC.viewModel = viewModel
+        resultVC.modalPresentationStyle = .fullScreen
+        super.init(viewController: resultVC)
+    }
+}

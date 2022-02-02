@@ -7,14 +7,14 @@
 
 import Foundation
 
-//open class BaseSegmentedViewControllerWrapper: ViewControllerWrapper {
-//    
-//    // MARK: - Lifecycle
-//    
-//    open init(viewModel: BaseSegmentedViewModel) {
-//        let resultVC = BaseSegmentedViewController()
-//        resultVC.viewModel = viewModel
-//        resultVC.modalPresentationStyle = .fullScreen
-//        super.init(viewController: resultVC)
-//    }
-//}
+open class BaseSegmentedViewControllerWrapper: ViewControllerWrapper {
+    
+    // MARK: - Lifecycle
+    
+    public init(viewModel: BaseSegmentedViewModel) {
+        let resultVC = BaseSegmentedViewController()
+        resultVC.viewModel = viewModel
+        resultVC.modalPresentationStyle = .fullScreen
+        super.init(viewController: resultVC)
+    }
+}
