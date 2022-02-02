@@ -7,7 +7,7 @@
 
 import UIKit
 
-open class BaseViewModel: BaseViewModelProtocol {
+open class BaseViewModel: BaseViewModelProtocol, NotificationServiceListener {
     
     // MARK: - Properties
     
@@ -48,11 +48,11 @@ open class BaseViewModel: BaseViewModelProtocol {
     }
     
     open func subscribeListeners() {
-//        self.services.notificationService.addListener(self)
+        self.services.notificationService.addListener(self)
     }
 
     open func removeListeners() {
-//        self.services.notificationService.removeListener(self)
+        self.services.notificationService.removeListener(self)
     }
     
     open func handleViewWillAppear() {

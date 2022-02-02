@@ -18,4 +18,8 @@ open class Services {
     open var navigationService: NavigationServiceProtocol {
         return NavigationService.shared
     }
+    
+    open var notificationService: NotificationService {
+        return NotificationService.shared
+    }
 }
