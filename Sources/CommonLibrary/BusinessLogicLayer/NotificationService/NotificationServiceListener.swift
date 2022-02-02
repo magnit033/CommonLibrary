@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol NotificationServiceListener {
+public protocol NotificationServiceListener: AnyObject {
     
 //    func isEqual(to other: NotificationServiceListener) -> Bool
     
