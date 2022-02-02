@@ -34,7 +34,9 @@ open class BaseTabBarController: UITabBarController, UITabBarControllerDelegate 
             return
         }
         self.tabBar.tintColor = viewModel.tintColor
-        self.tabBar.unselectedItemTintColor = viewModel.uselectedTintColor
+        if #available(iOS 10.0, *) {
+            self.tabBar.unselectedItemTintColor = viewModel.uselectedTintColor
+        }
         self.viewControllers = viewModel.viewControllers()
     }
 }
