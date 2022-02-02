@@ -7,15 +7,15 @@
 
 import UIKit
 
-class BaseTabBarControllerViewModel: BaseTabBarControllerViewModelProtocol {
+open class BaseTabBarControllerViewModel: BaseTabBarControllerViewModelProtocol {
     
     // MARK: - Properties
     
-    private let services = Services.shared
+    public let services = Services.shared
     
     // MARK: - BaseTabBarControllerViewModelProtocol
     
-    func viewControllers() -> [UIViewController] {
+    open func viewControllers() -> [UIViewController] {
         return []
     }
     
