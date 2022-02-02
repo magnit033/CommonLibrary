@@ -7,9 +7,9 @@
 
 import Foundation
 
-class Services {
+open class Services {
     
-    static let shared = Services()
+    public static let shared = Services()
     private init() {
     }
     
