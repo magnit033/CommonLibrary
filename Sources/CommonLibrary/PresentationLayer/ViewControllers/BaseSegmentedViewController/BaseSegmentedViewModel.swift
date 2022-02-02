@@ -13,11 +13,11 @@ open class BaseSegmentedViewModel: BaseTableViewModel, BaseSegmentedViewModelPro
     
     public var selectedSegment: Int = 0
     
-    public var segments: [String] {
+    open var segments: [String] {
         return ["", ""]
     }
     
-    public func didSelectSegment(segment: Int) {
+    open func didSelectSegment(segment: Int) {
         self.selectedSegment = segment
     }
     
