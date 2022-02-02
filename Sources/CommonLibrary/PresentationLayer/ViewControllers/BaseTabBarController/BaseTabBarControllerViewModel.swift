@@ -13,6 +13,11 @@ open class BaseTabBarControllerViewModel: BaseTabBarControllerViewModelProtocol 
     
     public let services = Services.shared
     
+    // MARK: - Lifecycle
+    
+    public init() {
+    }
+    
     // MARK: - BaseTabBarControllerViewModelProtocol
     
     open func viewControllers() -> [UIViewController] {
