@@ -13,6 +13,12 @@ open class BaseViewModel: BaseViewModelProtocol {
     
     public let services = Services.shared
     
+    // MARK: - Lifecycle
+    
+    open init() {
+        
+    }
+    
     // MARK: - BaseViewModelProtocol
     
     public weak var delegate: BaseViewModelDelegate?
