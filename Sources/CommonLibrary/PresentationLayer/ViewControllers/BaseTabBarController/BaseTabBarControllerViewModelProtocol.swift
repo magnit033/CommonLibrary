@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol BaseTabBarControllerViewModelProtocol {
+public protocol BaseTabBarControllerViewModelProtocol {
     
     func viewControllers() -> [UIViewController]
 }
