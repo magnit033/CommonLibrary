@@ -110,7 +110,7 @@ open class CommonTableView: UITableView,
         self.register(CommonRadioButtonCell.self, forCellReuseIdentifier: CommonRadioButtonCell.identifier)
         self.register(CommonTableViewCell.self, forCellReuseIdentifier: CommonTableViewCell.identifier)
         self.register(CommonShadowTableViewCell.self, forCellReuseIdentifier: CommonShadowTableViewCell.identifier)
-//        self.register(CommonCollectionCell.self, forCellReuseIdentifier: CommonCollectionCell.identifier)
+        self.register(CommonCollectionCell.self, forCellReuseIdentifier: CommonCollectionCell.identifier)
         self.register(CommonAttributedTitleCell.self, forCellReuseIdentifier: CommonAttributedTitleCell.identifier)
         self.register(CommonWebViewCell.self, forCellReuseIdentifier: CommonWebViewCell.identifier)
         self.register(CommonSegmentedCell.self, forCellReuseIdentifier: CommonSegmentedCell.identifier)
