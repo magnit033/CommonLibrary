@@ -23,4 +23,8 @@ open class CommonEmptyCellViewModel: CommonTableCellViewModel {
     open override var identifier: String {
         return CommonEmptyCell.identifier
     }
+    
+    open override var type: CommonTableCell.Type {
+        return CommonEmptyCell.self
+    }
 }

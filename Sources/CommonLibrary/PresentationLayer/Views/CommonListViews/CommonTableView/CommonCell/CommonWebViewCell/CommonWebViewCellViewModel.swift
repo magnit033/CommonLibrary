@@ -32,4 +32,8 @@ open class CommonWebViewCellViewModel: CommonTableCellViewModel, CommonWebViewCe
     open override var identifier: String {
         return CommonWebViewCell.identifier
     }
+    
+    open override var type: CommonTableCell.Type {
+        return CommonWebViewCell.self
+    }
 }

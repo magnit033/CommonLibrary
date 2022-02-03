@@ -33,4 +33,8 @@ open class CommonAttributedTitleCellViewModel: CommonButtonCellViewModel, Common
     open override var identifier: String {
         return CommonAttributedTitleCell.identifier
     }
+
+    open override var type: CommonTableCell.Type {
+        return CommonAttributedTitleCell.self
+    }
 }

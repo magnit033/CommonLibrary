@@ -35,4 +35,8 @@ open class CommonRadioButtonCellViewModel: CommonButtonCellViewModel, CommonRadi
     open override var identifier: String {
         return CommonRadioButtonCell.identifier
     }
+    
+    open override var type: CommonTableCell.Type {
+        return CommonRadioButtonCell.self
+    }
 }

@@ -26,6 +26,10 @@ open class CommonSegmentedCellViewModel: CommonTableCellViewModel, CommonSegment
         return CommonSegmentedCell.identifier
     }
     
+    open override var type: CommonTableCell.Type {
+        return CommonSegmentedCell.self
+    }
+    
     // MARK: - CommonSegmentedCellViewModelProtocol
     
     public var selected: Int = 0

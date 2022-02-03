@@ -29,6 +29,10 @@ open class CommonTableViewCellViewModel: CommonTableCellViewModel, CommonTableVi
         return CommonTableViewCell.identifier
     }
     
+    open override var type: CommonTableCell.Type {
+        return CommonTableViewCell.self
+    }
+    
     open override func selectCell(object: Any?) {
         self.delegate?.select(object: object)
     }

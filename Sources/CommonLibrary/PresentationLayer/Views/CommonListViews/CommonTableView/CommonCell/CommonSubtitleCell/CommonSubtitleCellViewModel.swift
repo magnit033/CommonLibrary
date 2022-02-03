@@ -43,4 +43,9 @@ open class CommonSubtitleCellViewModel: CommonButtonCellViewModel, CommonSubtitl
     open override var identifier: String {
         return CommonSubtitleCell.identifier
     }
+    
+    open override var type: CommonTableCell.Type {
+        return CommonSubtitleCell.self
+    }
+    
 }

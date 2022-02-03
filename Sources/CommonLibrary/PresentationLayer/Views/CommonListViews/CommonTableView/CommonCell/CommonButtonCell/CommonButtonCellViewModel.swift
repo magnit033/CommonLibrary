@@ -31,4 +31,8 @@ open class CommonButtonCellViewModel: CommonTableCellViewModel, CommonButtonCell
     open override var identifier: String {
         return CommonButtonCell.identifier
     }
+    
+    open override var type: CommonTableCell.Type {
+        return CommonButtonCell.self
+    }
 }

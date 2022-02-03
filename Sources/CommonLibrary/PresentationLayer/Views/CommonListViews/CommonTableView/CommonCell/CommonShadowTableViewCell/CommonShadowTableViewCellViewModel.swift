@@ -15,6 +15,10 @@ open class CommonShadowTableViewCellViewModel: CommonTableViewCellViewModel, Com
         return CommonShadowTableViewCell.identifier
     }
     
+    open override var type: CommonTableCell.Type {
+        return CommonShadowTableViewCell.self
+    }
+    
     open override func height() -> CGFloat {
         var result: CGFloat = 16
         self.cellViewModels.forEach({ result += $0.cellHeight })

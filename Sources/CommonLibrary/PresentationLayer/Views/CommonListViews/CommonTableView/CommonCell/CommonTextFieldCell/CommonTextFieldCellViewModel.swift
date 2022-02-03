@@ -51,4 +51,8 @@ open class CommonTextFieldCellViewModel: CommonTableCellViewModel, CommonTextFie
     open override var identifier: String {
         return CommonTextFieldCell.identifier
     }
+    
+    open override var type: CommonTableCell.Type {
+        return CommonTextFieldCell.self
+    }
 }

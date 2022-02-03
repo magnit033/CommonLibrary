@@ -29,6 +29,10 @@ open class CommonTableCellViewModel: CommonTableCellViewModelProtocol {
         return ""
     }
     
+    open var type: CommonTableCell.Type {
+        return CommonTableCell.self
+    }
+    
     public var cellHeight: CGFloat = 60
     
     open func update() {

@@ -27,6 +27,10 @@ open class CommonCollectionCellViewModel: CommonTableCellViewModel {
         return CommonCollectionCell.identifier
     }
     
+    open override var type: CommonTableCell.Type {
+        return CommonCollectionCell.self
+    }
+    
     // MARK: - To override
     
     open func configureItemViewModels() {
