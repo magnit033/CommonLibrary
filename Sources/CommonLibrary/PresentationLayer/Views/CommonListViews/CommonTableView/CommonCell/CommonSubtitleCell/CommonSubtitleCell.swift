@@ -60,6 +60,7 @@ open class CommonSubtitleCell: CommonButtonCell {
         }
         
         self.titleLabel.text = viewModel.title
+        self.titleLabel.textColor = viewModel.titleColor
         self.titleLabel.numberOfLines = viewModel.titleLines
         self.subtitleLabel.text = viewModel.subtitle
         self.subtitleLabel.textColor = viewModel.subtitleColor

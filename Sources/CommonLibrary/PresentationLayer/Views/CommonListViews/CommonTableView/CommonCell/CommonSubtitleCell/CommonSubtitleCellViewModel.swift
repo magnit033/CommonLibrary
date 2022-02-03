@@ -34,6 +34,7 @@ open class CommonSubtitleCellViewModel: CommonButtonCellViewModel, CommonSubtitl
     // MARK: - CommonTitleCellViewModelProtocol
     
     public var title: String
+    public var titleColor: UIColor = UIColor.black
     public var titleLines: Int
     public var subtitle: String
     public var subtitleColor: UIColor
