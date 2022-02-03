@@ -14,14 +14,16 @@ open class CommonSubtitleCellViewModel: CommonButtonCellViewModel, CommonSubtitl
     // MARK: - Lifecycle
     
     public init(title: String,
-         titleLines: Int = 0,
-         subtitle: String,
-         subtitleColor: UIColor = UIColor.systemGray,
-         separatorColor: UIColor = UIColor.clear,
-         height: CGFloat = 60,
-         object: CommonTableCellObjects? = nil) {
+                titleColor: UIColor = UIColor.black,
+                titleLines: Int = 0,
+                subtitle: String,
+                subtitleColor: UIColor = UIColor.systemGray,
+                separatorColor: UIColor = UIColor.clear,
+                height: CGFloat = 60,
+                object: CommonTableCellObjects? = nil) {
         
         self.title = title
+        self.titleColor = titleColor
         self.titleLines = titleLines
         self.subtitle = subtitle
         self.subtitleColor = subtitleColor
@@ -34,7 +36,7 @@ open class CommonSubtitleCellViewModel: CommonButtonCellViewModel, CommonSubtitl
     // MARK: - CommonTitleCellViewModelProtocol
     
     public var title: String
-    public var titleColor: UIColor = UIColor.black
+    public var titleColor: UIColor
     public var titleLines: Int
     public var subtitle: String
     public var subtitleColor: UIColor
