@@ -14,4 +14,6 @@ public protocol CommonTableViewModelProtocol {
     
     func numberOfRows() -> Int
     func cellViewModel(indexPath: IndexPath) -> CommonTableCellViewModel?
+    
+    func cells() -> [String: CommonTableCell.Type]
 }

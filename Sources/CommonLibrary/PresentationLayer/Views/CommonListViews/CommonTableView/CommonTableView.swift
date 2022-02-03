@@ -17,6 +17,7 @@ open class CommonTableView: UITableView,
     
     public var viewModel: CommonTableViewModelProtocol? {
         didSet {
+            self.registerCells()
             self.updateView()
             self.reload()
         }
@@ -100,26 +101,15 @@ open class CommonTableView: UITableView,
         self.tableFooterView = UIView()
         self.delegate = self
         self.dataSource = self
-        
-        let types = [CommonEmptyCell.identifier: CommonEmptyCell.self,
-                     CommonButtonCell.identifier: CommonButtonCell.self]
-        
-        types.forEach({ key, value in
+    
+    }
+    
+    private func registerCells() {
+        guard let viewModel = viewModel else {
+            return
+        }
+        viewModel.cells().forEach({ key, value in
             self.register(value, forCellReuseIdentifier: key)
         })
-        
-//        self.register(CommonEmptyCell.self, forCellReuseIdentifier: CommonEmptyCell.identifier)
-//        self.register(CommonButtonCell.self, forCellReuseIdentifier: CommonButtonCell.identifier)
-        self.register(CommonTitleCell.self, forCellReuseIdentifier: CommonTitleCell.identifier)
-        self.register(CommonRightTitleCell.self, forCellReuseIdentifier: CommonRightTitleCell.identifier)
-        self.register(CommonTextFieldCell.self, forCellReuseIdentifier: CommonTextFieldCell.identifier)
-        self.register(CommonSubtitleCell.self, forCellReuseIdentifier: CommonSubtitleCell.identifier)
-        self.register(CommonRadioButtonCell.self, forCellReuseIdentifier: CommonRadioButtonCell.identifier)
-        self.register(CommonTableViewCell.self, forCellReuseIdentifier: CommonTableViewCell.identifier)
-        self.register(CommonShadowTableViewCell.self, forCellReuseIdentifier: CommonShadowTableViewCell.identifier)
-        self.register(CommonCollectionCell.self, forCellReuseIdentifier: CommonCollectionCell.identifier)
-        self.register(CommonAttributedTitleCell.self, forCellReuseIdentifier: CommonAttributedTitleCell.identifier)
-        self.register(CommonWebViewCell.self, forCellReuseIdentifier: CommonWebViewCell.identifier)
-        self.register(CommonSegmentedCell.self, forCellReuseIdentifier: CommonSegmentedCell.identifier)
     }
 }
