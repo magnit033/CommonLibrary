@@ -62,6 +62,7 @@ open class CommonTextFieldCell: CommonTableCell, CommonTextViewDelegate, CommonT
         }
         
         let config = CommonTextViewConfig(placeHolder: viewModel.placeHolder,
+                                          keyboardType: viewModel.keyboardType,
                                           returnKeyType: viewModel.returnType,
                                           languageCode: viewModel.languageCode)
         self.textField.viewModel = CommonTextViewModel(config: config, text: viewModel.text)

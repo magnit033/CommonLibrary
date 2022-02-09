@@ -17,11 +17,9 @@ open class CommonTextFieldCellViewModel: CommonTableCellViewModel, CommonTextFie
     
     // MARK: - Lifecycle
     
-    public init(text: String, placeHolder: String, returnType: UIReturnKeyType = .default, languageCode: String, object: CommonTableCellObjects? = nil) {
+    public init(text: String, placeHolder: String, object: CommonTableCellObjects? = nil) {
         self.text = text
         self.placeHolder = placeHolder
-        self.returnType = returnType
-        self.languageCode = languageCode
         
         super.init(object: object)
         self.cellHeight = 80
@@ -31,8 +29,9 @@ open class CommonTextFieldCellViewModel: CommonTableCellViewModel, CommonTextFie
     
     public var text: String
     public var placeHolder: String
-    public var returnType: UIReturnKeyType
-    public var languageCode: String
+    public var returnType: UIReturnKeyType = .default
+    public var languageCode: String = "ru"
+    public var keyboardType: UIKeyboardType = .default
     
     open func open() {
         self.selfDelegate?.open()

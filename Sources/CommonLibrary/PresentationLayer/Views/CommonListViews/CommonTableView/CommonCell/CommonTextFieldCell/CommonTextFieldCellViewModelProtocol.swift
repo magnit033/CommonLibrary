@@ -13,6 +13,7 @@ public protocol CommonTextFieldCellViewModelProtocol {
     var placeHolder: String { get }
     var returnType: UIReturnKeyType { get }
     var languageCode: String { get }
+    var keyboardType: UIKeyboardType { get }
     
     func close()
 }
