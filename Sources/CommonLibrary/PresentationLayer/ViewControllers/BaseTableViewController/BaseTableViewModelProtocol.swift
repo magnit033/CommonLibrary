@@ -5,13 +5,14 @@
 //  Created by Shupegin Sergey on 27.10.2021.
 //
 
-import Foundation
+import UIKit
 
 public protocol BaseTableViewModelProtocol {
     
     var ignoreKeyboard: Bool { get }
     
     var bottomButtonTitle: String { get }
+    var bottomButtonTitleColor: UIColor { get }
     func bottomButtonAction()
     
     var cellViewModels: [CommonTableCellViewModel] { get }
