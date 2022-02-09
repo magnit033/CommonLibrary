@@ -30,7 +30,7 @@ open class CommonTextFieldCellViewModel: CommonTableCellViewModel, CommonTextFie
     public var text: String
     public var placeHolder: String
     public var returnType: UIReturnKeyType = .default
-    public var languageCode: String = "ru"
+    public var languageCode: String = Locale.current.languageCode ?? "ru"
     public var keyboardType: UIKeyboardType = .default
     
     open func open() {
