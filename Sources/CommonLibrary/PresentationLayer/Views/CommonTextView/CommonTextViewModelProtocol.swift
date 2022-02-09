@@ -16,5 +16,6 @@ public protocol CommonTextViewModelProtocol {
     var returnKeyType: UIReturnKeyType { get }
     var autocorrectionType: UITextAutocorrectionType { get }
     var languageCode: String { get }
+    var font: UIFont { get }
     
 }

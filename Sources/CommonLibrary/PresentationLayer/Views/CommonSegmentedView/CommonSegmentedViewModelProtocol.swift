@@ -11,4 +11,5 @@ public protocol CommonSegmentedViewModelProtocol {
     
     var segments: [String] { get }
     var initialSelected: Int { get }
+    var config: CommonConfig { get }
 }

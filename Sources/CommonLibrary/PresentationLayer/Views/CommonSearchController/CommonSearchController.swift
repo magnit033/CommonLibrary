@@ -19,6 +19,9 @@ public class CommonSearchController: UISearchController, UISearchResultsUpdating
                 return
             }
             self.searchBar.placeholder = viewModel.placeholder
+            if #available(iOS 13.0, *) {
+                self.searchBar.searchTextField.font = viewModel.config.font
+            }
         }
     }
     

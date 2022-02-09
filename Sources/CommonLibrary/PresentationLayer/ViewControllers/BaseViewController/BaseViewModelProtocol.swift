@@ -10,6 +10,7 @@ import UIKit
 public protocol BaseViewModelProtocol {
     
     var delegate: BaseViewModelDelegate? { get set }
+    var config: CommonConfig { get }
     
     var backGroundColor: UIColor { get }
     

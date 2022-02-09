@@ -21,6 +21,7 @@ public class CommonSegmentedView: UISegmentedControl {
             self.removeAllSegments()
             self.configureSegments()
             self.selectedSegmentIndex = viewModel.initialSelected
+            self.setTitleTextAttributes([NSAttributedString.Key.font: viewModel.config.font], for: .normal)
         }
     }
     

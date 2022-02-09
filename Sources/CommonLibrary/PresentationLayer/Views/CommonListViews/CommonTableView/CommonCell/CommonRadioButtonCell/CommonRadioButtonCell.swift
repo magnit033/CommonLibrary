@@ -41,6 +41,9 @@ open class CommonRadioButtonCell: CommonButtonCell {
         }
         self.titleLabel.text = viewModel.title
         self.rightTitleLabel.text = viewModel.rightTitle
+        
+        self.titleLabel.font = viewModel.config.font
+        self.titleLabel.font = viewModel.config.font
         self.updateImageView()
     }
     

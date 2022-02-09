@@ -40,7 +40,9 @@ open class BaseSegmentedViewController: BaseTableViewController, CommonSegmented
         guard let selfViewModel = self.selfViewModel else {
             return
         }
-        self.segmentedControl.viewModel = CommonSegmentedViewModel(segments: selfViewModel.segments, selected: selfViewModel.selectedSegment)
+        self.segmentedControl.viewModel = CommonSegmentedViewModel(segments: selfViewModel.segments,
+                                                                   selected: selfViewModel.selectedSegment,
+                                                                   config: selfViewModel.config)
     }
     
     // MARK: - Private

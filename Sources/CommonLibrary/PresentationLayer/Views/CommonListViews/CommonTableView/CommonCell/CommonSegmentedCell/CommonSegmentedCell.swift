@@ -30,7 +30,9 @@ open class CommonSegmentedCell: CommonTableCell, CommonSegmentedViewDelegate {
         guard let selfViewModel = self.selfViewModel else {
             return
         }
-        self.segmentedControl.viewModel = CommonSegmentedViewModel(segments: selfViewModel.segments.map({ $0.name }), selected: selfViewModel.selected)
+        self.segmentedControl.viewModel = CommonSegmentedViewModel(segments: selfViewModel.segments.map({ $0.name }),
+                                                                   selected: selfViewModel.selected,
+                                                                   config: selfViewModel.config)
     }
     
     open override func setupLayout() {

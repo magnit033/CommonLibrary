@@ -26,6 +26,7 @@ open class CommonAttributedTitleCell: CommonButtonCell {
             return
         }
         self.titleLabel.attributedText = viewModel.title
+        self.titleLabel.font = viewModel.config.font
     }
     
     open override func setup() {

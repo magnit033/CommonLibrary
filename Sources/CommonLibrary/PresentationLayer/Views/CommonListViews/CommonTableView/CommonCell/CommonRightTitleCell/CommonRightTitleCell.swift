@@ -28,6 +28,9 @@ open class CommonRightTitleCell: CommonButtonCell {
         }
         self.titleLabel.text = viewModel.title
         self.rightTitleLabel.text = viewModel.rightTitle
+        
+        self.rightTitleLabel.font = viewModel.config.font
+        self.titleLabel.font = viewModel.config.font
     }
     
     // MARK: - Override
@@ -37,11 +40,9 @@ open class CommonRightTitleCell: CommonButtonCell {
         super.setup()
         
         self.rightTitleLabel.numberOfLines = 0
-        self.rightTitleLabel.font = UIFont.systemFont(ofSize: 17)
         self.rightTitleLabel.textAlignment = .right
         
         self.titleLabel.numberOfLines = 0
-        self.titleLabel.font = UIFont.systemFont(ofSize: 17)
         self.titleLabel.textAlignment = .left
     }
     

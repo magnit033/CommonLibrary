@@ -11,12 +11,14 @@ public class CommonSearchControllerViewModel: CommonSearchControllerViewModelPro
     
     // MARK: - Lifecycle
     
-    public init(placeholder: String) {
+    public init(placeholder: String, config: CommonConfig) {
         self.placeholder = placeholder
+        self.config = config
     }
     
     // MARK: - CommonSearchControllerViewModelProtocol
     
     public var placeholder: String
+    public var config: CommonConfig
     
 }

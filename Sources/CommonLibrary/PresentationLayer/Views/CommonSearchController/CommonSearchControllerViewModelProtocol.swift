@@ -10,5 +10,6 @@ import Foundation
 public protocol CommonSearchControllerViewModelProtocol {
     
     var placeholder: String { get }
+    var config: CommonConfig { get }
     
 }

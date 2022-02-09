@@ -42,4 +42,7 @@ public class CommonTextViewModel: CommonTextViewModelProtocol {
     public var languageCode: String {
         return config.languageCode
     }
+    public var font: UIFont {
+        return config.font
+    }
 }

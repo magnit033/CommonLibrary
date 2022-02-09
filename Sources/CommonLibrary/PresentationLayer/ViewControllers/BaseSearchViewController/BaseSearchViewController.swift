@@ -22,7 +22,11 @@ open class BaseSearchViewController: BaseTableViewController, CommonSearchContro
     open override func setupNavigation() {
         super.setupNavigation()
         
-        self.searchController.viewModel = CommonSearchControllerViewModel(placeholder: "Поиск")
+        guard let selfViewModel = selfViewModel else {
+            return
+        }
+        
+        self.searchController.viewModel = CommonSearchControllerViewModel(placeholder: "Поиск", config: selfViewModel.config)
         self.searchController.searchDelegate = self
         if #available(iOS 11.0, *) {
             self.navigationItem.searchController = self.searchController

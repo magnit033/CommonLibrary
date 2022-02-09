@@ -15,15 +15,17 @@ public class CommonTextViewConfig {
     public let returnKeyType: UIReturnKeyType
     public let autocorrectionType: UITextAutocorrectionType
     public let languageCode: String
+    public let font: UIFont
     
     // MARK: - Lifecycle
     
     public init(placeHolder: String,
-         keyboardType: UIKeyboardType = .default,
-         autocapitalizationType: UITextAutocapitalizationType = .sentences,
-         returnKeyType: UIReturnKeyType = .default,
-         autocorrectionType: UITextAutocorrectionType = .yes,
-         languageCode: String = "en") {
+                keyboardType: UIKeyboardType = .default,
+                autocapitalizationType: UITextAutocapitalizationType = .sentences,
+                returnKeyType: UIReturnKeyType = .default,
+                autocorrectionType: UITextAutocorrectionType = .yes,
+                languageCode: String = "en",
+                font: UIFont = .systemFont(ofSize: 17)) {
         
         self.placeHolder = placeHolder
         self.keyboardType = keyboardType
@@ -31,5 +33,6 @@ public class CommonTextViewConfig {
         self.returnKeyType = returnKeyType
         self.autocorrectionType = autocorrectionType
         self.languageCode = languageCode
+        self.font = font
     }
 }

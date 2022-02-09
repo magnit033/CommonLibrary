@@ -22,6 +22,10 @@ open class CommonTableCellViewModel: CommonTableCellViewModelProtocol {
     
     public weak var delegate: CommonTableCellViewModelDelegate?
     
+    open var config: CommonConfig {
+        return CommonConfig()
+    }
+    
     public var object: CommonTableCellObjects?
     public var separatorColor: UIColor? = UIColor.clear
     

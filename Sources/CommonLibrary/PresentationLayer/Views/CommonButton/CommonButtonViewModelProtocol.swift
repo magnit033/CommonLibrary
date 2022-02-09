@@ -11,5 +11,6 @@ public protocol CommonButtonViewModelProtocol {
     
     var title: String { get }
     var titleColor: UIColor { get }
+    var config: CommonConfig { get }
     
 }

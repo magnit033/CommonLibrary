@@ -59,7 +59,7 @@ open class BaseTableViewController: BaseViewController, BaseTableViewModelDelega
         guard let selfViewModel = selfViewModel else {
             return
         }
-        self.bottomButton.viewModel = CommonButtonViewModel(title: selfViewModel.bottomButtonTitle, titleColor: UIColor.systemBlue)
+        self.bottomButton.viewModel = CommonButtonViewModel(title: selfViewModel.bottomButtonTitle, titleColor: UIColor.systemBlue, config: selfViewModel.config)
     }
     
     open override func keyboardWillShow(size: CGFloat) {

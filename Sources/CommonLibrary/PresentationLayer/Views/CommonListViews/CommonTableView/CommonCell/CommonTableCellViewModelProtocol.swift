@@ -10,6 +10,7 @@ import UIKit
 public protocol CommonTableCellViewModelProtocol {
     
     var delegate: CommonTableCellViewModelDelegate? { get set }
+    var config: CommonConfig { get }
     
     var object: CommonTableCellObjects? { get }
     var identifier: String { get }

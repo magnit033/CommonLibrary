@@ -26,7 +26,7 @@ open class CommonTitleCell: CommonButtonCell {
             return
         }
         self.titleLabel.text = viewModel.title
-        self.titleLabel.font = UIFont.boldSystemFont(ofSize: viewModel.titleSize)
+        self.titleLabel.font = viewModel.config.font.withSize(viewModel.titleSize)
         self.titleLabel.textColor = viewModel.titleColor
         self.titleLabel.textAlignment = viewModel.titleAlignment
     }

@@ -41,5 +41,6 @@ public class CommonButton: UIButton {
         self.setTitle(viewModel.title, for: .normal)
         self.setTitleColor(viewModel.titleColor, for: .normal)
         self.setTitleColor(viewModel.titleColor, for: .highlighted)
+        self.titleLabel?.font = viewModel.config.font
     }
 }
