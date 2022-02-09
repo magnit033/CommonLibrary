@@ -19,4 +19,8 @@ open class CommonConfig {
     open var boldFont: UIFont {
         return UIFont.boldSystemFont(ofSize: 17)
     }
+    
+    open var errorColor: UIColor {
+        return UIColor.red
+    }
 }
