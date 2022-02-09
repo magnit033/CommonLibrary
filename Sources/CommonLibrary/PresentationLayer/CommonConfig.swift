@@ -9,6 +9,9 @@ import UIKit
 
 open class CommonConfig {
     
+    public init() {
+    }
+    
     open var font: UIFont {
         return UIFont.systemFont(ofSize: 17)
     }
