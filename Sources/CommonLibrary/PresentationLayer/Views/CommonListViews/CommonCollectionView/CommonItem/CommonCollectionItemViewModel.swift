@@ -18,10 +18,7 @@ open class CommonCollectionItemViewModel: CommonCollectionItemViewModelProtocol 
     // MARK: - CommonCollectionItemViewModelProtocol
     
     public var object: CommonTableCellObjects?
-    
-    open var config: CommonConfig {
-        return CommonConfig()
-    }
+    open var config: CommonConfig = CommonConfig()
     
     open var identifier: String {
         return ""
