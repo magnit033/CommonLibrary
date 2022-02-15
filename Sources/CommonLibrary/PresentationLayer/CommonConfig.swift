@@ -45,6 +45,6 @@ open class CommonConfig {
     }
     
     open var backgroundColor: UIColor {
-        return UIColor.white
+        return UIColor.clear
     }
 }
