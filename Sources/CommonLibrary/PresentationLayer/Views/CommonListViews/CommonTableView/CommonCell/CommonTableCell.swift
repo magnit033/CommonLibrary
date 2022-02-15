@@ -69,7 +69,6 @@ open class CommonTableCell: UITableViewCell, CommonTableCellViewModelDelegate {
         
         self.heightView.backgroundColor = UIColor.clear
         self.contentView.sendSubviewToBack(self.heightView)
-        self.backgroundColor = UIColor.clear
     }
     
     open func setupLayout() {
