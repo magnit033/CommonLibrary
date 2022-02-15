@@ -13,9 +13,13 @@ open class CommonButtonCellViewModel: CommonTableCellViewModel, CommonButtonCell
     
     // MARK: - Lifecycle
     
-    public init(title: String = " ", height: CGFloat = 60, object: CommonTableCellObjects? = nil) {
+    public init(title: String = " ",
+                height: CGFloat = 60,
+                config: CommonConfig,
+                object: CommonTableCellObjects? = nil) {
+        
         self.buttonTitle = title
-        super.init(object: object)
+        super.init(config: config, object: object)
         
         self.cellHeight = height
     }

@@ -17,12 +17,13 @@ open class CommonSubtitleCellViewModel: CommonButtonCellViewModel, CommonSubtitl
                 titleLines: Int = 0,
                 subtitle: String,
                 height: CGFloat = 60,
+                config: CommonConfig,
                 object: CommonTableCellObjects? = nil) {
         
         self.title = title
         self.titleLines = titleLines
         self.subtitle = subtitle
-        super.init(object: object)
+        super.init(config: config, object: object)
         
         self.cellHeight = height
     }

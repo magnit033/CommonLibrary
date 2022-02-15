@@ -12,11 +12,12 @@ open class CommonWebViewCellViewModel: CommonTableCellViewModel, CommonWebViewCe
     // MARK: - Lifecycle
     
     public init(urlString: String,
-         height: CGFloat = 44,
-         object: CommonTableCellObjects? = nil) {
+                height: CGFloat = 44,
+                config: CommonConfig,
+                object: CommonTableCellObjects? = nil) {
         
         self.url = URL(string: urlString)
-        super.init(object: object)
+        super.init(config: config, object: object)
         
         self.cellHeight = height
     }

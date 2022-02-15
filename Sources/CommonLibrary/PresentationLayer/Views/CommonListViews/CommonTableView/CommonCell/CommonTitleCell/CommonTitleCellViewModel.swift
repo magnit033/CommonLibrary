@@ -15,10 +15,10 @@ open class CommonTitleCellViewModel: CommonButtonCellViewModel, CommonTitleCellV
     
     public override init(title: String,
                          height: CGFloat = 44,
+                         config: CommonConfig,
                          object: CommonTableCellObjects? = nil) {
-        
         self.title = title
-        super.init(object: object)
+        super.init(config: config, object: object)
         
         self.cellHeight = height
     }

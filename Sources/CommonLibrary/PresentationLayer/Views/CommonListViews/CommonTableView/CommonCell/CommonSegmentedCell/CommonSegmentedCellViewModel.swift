@@ -13,9 +13,10 @@ open class CommonSegmentedCellViewModel: CommonTableCellViewModel, CommonSegment
     
     // MARK: - Lifecycle
     
-    public init(segments: [CommonSegmentedCellSegment]) {
+    public init(segments: [CommonSegmentedCellSegment],
+                config: CommonConfig) {
         self.segments = segments
-        super.init(object: nil)
+        super.init(config: config, object: nil)
         
         self.cellHeight = 80
     }

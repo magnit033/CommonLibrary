@@ -14,11 +14,12 @@ open class CommonAttributedTitleCellViewModel: CommonButtonCellViewModel, Common
     // MARK: - Lifecycle
     
     public init(title: NSAttributedString,
-         height: CGFloat = 44,
-         object: CommonTableCellObjects? = nil) {
+                height: CGFloat = 44,
+                config: CommonConfig,
+                object: CommonTableCellObjects? = nil) {
         
         self.title = title
-        super.init(object: object)
+        super.init(config: config, object: object)
         
         self.cellHeight = height
     }

@@ -14,16 +14,15 @@ open class CommonTableCellViewModel: CommonTableCellViewModelProtocol {
     
     // MARK: - Lifecycle
     
-    public init(object: CommonTableCellObjects? = nil) {
+    public init(config: CommonConfig, object: CommonTableCellObjects? = nil) {
         self.object = object
+        self.config = config
     }
     
     // MARK: - To override
     
     public weak var delegate: CommonTableCellViewModelDelegate?
-    
-    public var config: CommonConfig = CommonConfig()
-    
+    public var config: CommonConfig
     public var object: CommonTableCellObjects?
     
     open var identifier: String {

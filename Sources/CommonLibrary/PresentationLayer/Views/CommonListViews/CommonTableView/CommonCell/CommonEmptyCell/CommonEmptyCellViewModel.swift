@@ -14,7 +14,7 @@ open class CommonEmptyCellViewModel: CommonTableCellViewModel {
     // MARK: - Lifecycle
     
     public init(height: CGFloat) {
-        super.init()
+        super.init(config: CommonConfig())
         self.cellHeight = height
     }
     

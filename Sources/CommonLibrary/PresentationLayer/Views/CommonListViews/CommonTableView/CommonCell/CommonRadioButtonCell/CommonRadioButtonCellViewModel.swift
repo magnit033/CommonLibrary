@@ -12,14 +12,15 @@ open class CommonRadioButtonCellViewModel: CommonButtonCellViewModel, CommonRadi
     // MARK: - Lifecycle
     
     public init(title: String,
-         rightTitle: String,
-         isSelected: Bool = false,
-         object: CommonTableCellObjects? = nil) {
+                rightTitle: String,
+                isSelected: Bool = false,
+                config: CommonConfig,
+                object: CommonTableCellObjects? = nil) {
         
         self.title = title
         self.rightTitle = rightTitle
         self.isSelected = isSelected
-        super.init(object: object)
+        super.init(config: config, object: object)
         
         self.cellHeight = 40
     }

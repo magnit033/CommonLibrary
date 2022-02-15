@@ -13,10 +13,14 @@ open class CommonRightTitleCellViewModel: CommonButtonCellViewModel, CommonRight
     
     // MARK: - Lifecycle
     
-    public init(title: String, rightTitle: String, height: CGFloat = 40, object: CommonTableCellObjects? = nil) {
+    public init(title: String,
+                rightTitle: String,
+                height: CGFloat = 40,
+                config: CommonConfig,
+                object: CommonTableCellObjects? = nil) {
         self.title = title
         self.rightTitle = rightTitle
-        super.init(object: object)
+        super.init(config: config, object: object)
         
         self.cellHeight = height
     }

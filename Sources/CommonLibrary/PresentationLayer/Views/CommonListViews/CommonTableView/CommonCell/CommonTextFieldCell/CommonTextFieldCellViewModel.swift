@@ -17,11 +17,14 @@ open class CommonTextFieldCellViewModel: CommonTableCellViewModel, CommonTextFie
     
     // MARK: - Lifecycle
     
-    public init(text: String, placeHolder: String, object: CommonTableCellObjects? = nil) {
+    public init(text: String,
+                placeHolder: String,
+                config: CommonConfig,
+                object: CommonTableCellObjects? = nil) {
         self.text = text
         self.placeHolder = placeHolder
+        super.init(config: config, object: object)
         
-        super.init(object: object)
         self.cellHeight = 80
     }
     
