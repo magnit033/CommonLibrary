@@ -23,7 +23,9 @@ open class BaseViewModel: BaseViewModelProtocol, NotificationServiceListener {
     
     public weak var delegate: BaseViewModelDelegate?
     
-    open var config: CommonConfig = CommonConfig()
+    open var config: CommonConfig {
+        return CommonConfig()
+    }
     
     open var backGroundColor: UIColor {
         return UIColor.white

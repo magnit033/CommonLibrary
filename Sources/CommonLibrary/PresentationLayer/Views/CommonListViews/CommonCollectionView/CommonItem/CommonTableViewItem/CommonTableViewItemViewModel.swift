@@ -11,8 +11,9 @@ open class CommonTableViewItemViewModel: CommonCollectionItemViewModel, CommonTa
     
     // MARK: - Lifecycle
     
-    public override init(object: CommonTableCellObjects? = nil) {
-        super.init(object: object)
+    public override init(config: CommonConfig,
+                         object: CommonTableCellObjects? = nil) {
+        super.init(config: config, object: object)
         self.configureCellViewModels()
     }
     

@@ -11,14 +11,16 @@ open class CommonCollectionItemViewModel: CommonCollectionItemViewModelProtocol 
     
     // MARK: - Lifecycle
     
-    public init(object: CommonTableCellObjects? = nil) {
+    public init(config: CommonConfig,
+                object: CommonTableCellObjects? = nil) {
         self.object = object
+        self.config = config
     }
     
     // MARK: - CommonCollectionItemViewModelProtocol
     
     public var object: CommonTableCellObjects?
-    open var config: CommonConfig = CommonConfig()
+    open var config: CommonConfig
     
     open var identifier: String {
         return ""
