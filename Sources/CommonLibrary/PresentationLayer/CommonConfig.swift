@@ -36,10 +36,6 @@ open class CommonConfig {
         return UIFont.systemFont(ofSize: 17)
     }
     
-    open var boldFont: UIFont {
-        return UIFont.boldSystemFont(ofSize: 17)
-    }
-    
     open var errorColor: UIColor {
         return UIColor.red
     }
