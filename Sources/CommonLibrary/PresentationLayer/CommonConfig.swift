@@ -28,6 +28,14 @@ open class CommonConfig {
         return UIColor.systemGray
     }
     
+    open var subtitleSize: CGFloat {
+        return 17
+    }
+    
+    open var subtitleAlignment: NSTextAlignment {
+        return .left
+    }
+    
     open var separatorColor: UIColor {
         return UIColor.clear
     }
