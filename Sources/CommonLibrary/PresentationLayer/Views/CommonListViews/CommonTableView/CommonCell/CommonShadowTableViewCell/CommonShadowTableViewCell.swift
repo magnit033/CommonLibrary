@@ -41,7 +41,7 @@ open class CommonShadowTableViewCell: CommonTableCell, CommonListViewDelegate {
             return
         }
         self.tableView.viewModel = CommonTableViewModel(cellViewModels: cellViewModel.cellViewModels, alwaysBounceVertical: false)
-        self.containerView.backgroundColor = cellViewModel.config.backgroundColor
+        self.containerView.backgroundColor = UIColor.clear
     }
     
     open override func setup() {
