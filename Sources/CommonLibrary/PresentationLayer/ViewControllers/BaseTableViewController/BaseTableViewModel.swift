@@ -31,9 +31,6 @@ open class BaseTableViewModel: BaseViewModel, BaseTableViewModelProtocol {
     open var bottomButtonTitle: String {
         return ""
     }
-    open var bottomButtonTitleColor: UIColor {
-        return UIColor.systemBlue
-    }
     open func bottomButtonAction() {
         
     }

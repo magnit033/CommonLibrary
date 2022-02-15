@@ -12,7 +12,6 @@ public protocol BaseTableViewModelProtocol {
     var ignoreKeyboard: Bool { get }
     
     var bottomButtonTitle: String { get }
-    var bottomButtonTitleColor: UIColor { get }
     func bottomButtonAction()
     
     var cellViewModels: [CommonTableCellViewModel] { get }
