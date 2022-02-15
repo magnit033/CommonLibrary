@@ -17,9 +17,7 @@ open class CommonRightTitleCellViewModel: CommonButtonCellViewModel, CommonRight
         self.title = title
         self.rightTitle = rightTitle
         super.init(object: object)
-        if #available(iOS 13.0, *) {
-            self.separatorColor = UIColor.systemGray5
-        }
+        
         self.cellHeight = height
     }
     

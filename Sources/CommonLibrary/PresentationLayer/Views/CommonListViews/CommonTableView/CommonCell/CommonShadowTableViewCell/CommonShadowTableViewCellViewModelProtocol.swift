@@ -9,6 +9,4 @@ import UIKit
 
 public protocol CommonShadowTableViewCellViewModelProtocol {
     
-    var backgrounColor: UIColor { get }
-    
 }

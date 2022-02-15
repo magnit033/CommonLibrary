@@ -49,7 +49,7 @@ open class CommonCollectionItem: UICollectionViewCell {
     
     open func updateView() {
         
-        self.rightSeparatorCell.backgroundColor = self.viewModel?.rightSeparatorColor
+        self.rightSeparatorCell.backgroundColor = self.viewModel?.config.separatorColor
     }
     
     open func setup() {

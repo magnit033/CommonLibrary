@@ -10,9 +10,10 @@ import UIKit
 public protocol CommonCollectionItemViewModelProtocol {
     
     var object: CommonTableCellObjects? { get }
+    var config: CommonConfig { get }
+    
     var identifier: String { get }
     
-    var rightSeparatorColor: UIColor { get }
     var itemWidth: CGFloat { get }
     var itemHeight: CGFloat { get }
 }

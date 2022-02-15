@@ -60,7 +60,6 @@ open class BaseTableViewController: BaseViewController, BaseTableViewModelDelega
             return
         }
         self.bottomButton.viewModel = CommonButtonViewModel(title: selfViewModel.bottomButtonTitle,
-                                                            titleColor: selfViewModel.bottomButtonTitleColor,
                                                             config: selfViewModel.config)
     }
     

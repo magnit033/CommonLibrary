@@ -14,7 +14,6 @@ public protocol CommonTableCellViewModelProtocol {
     
     var object: CommonTableCellObjects? { get }
     var identifier: String { get }
-    var separatorColor: UIColor? { get }
     var cellHeight: CGFloat { get }
     
     func selectCell(object: Any?)

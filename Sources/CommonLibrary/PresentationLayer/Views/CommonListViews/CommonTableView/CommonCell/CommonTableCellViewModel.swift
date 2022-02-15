@@ -27,7 +27,6 @@ open class CommonTableCellViewModel: CommonTableCellViewModelProtocol {
     }
     
     public var object: CommonTableCellObjects?
-    public var separatorColor: UIColor? = UIColor.clear
     
     open var identifier: String {
         return ""

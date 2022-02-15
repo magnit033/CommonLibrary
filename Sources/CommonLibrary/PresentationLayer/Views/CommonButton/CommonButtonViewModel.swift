@@ -11,16 +11,14 @@ public class CommonButtonViewModel: CommonButtonViewModelProtocol {
     
     // MARK: - Lifecycle
     
-    public init(title: String, titleColor: UIColor, config: CommonConfig) {
+    public init(title: String, config: CommonConfig) {
         self.title = title
-        self.titleColor = titleColor
         self.config = config
     }
     
     // MARK: - CommonButtonViewModelProtocol
     
     public var title: String
-    public var titleColor: UIColor
     public var config: CommonConfig
     
 }

@@ -34,7 +34,7 @@ open class CommonButtonCell: CommonTableCell {
         guard let viewModel = viewModel as? CommonButtonCellViewModel else {
             return
         }
-        self.cellButton.viewModel = CommonButtonViewModel(title: viewModel.buttonTitle, titleColor: viewModel.buttonTitleColor, config: viewModel.config)
+        self.cellButton.viewModel = CommonButtonViewModel(title: viewModel.buttonTitle, config: viewModel.config)
     }
     
     open override func setup() {

@@ -10,7 +10,5 @@ import UIKit
 public protocol CommonTitleCellViewModelProtocol {
     
     var title: String { get }
-    var titleSize: CGFloat { get }
-    var titleColor: UIColor { get }
-    var titleAlignment: NSTextAlignment { get }
+    
 }

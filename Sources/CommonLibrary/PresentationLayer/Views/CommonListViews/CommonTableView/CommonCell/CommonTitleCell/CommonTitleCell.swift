@@ -26,9 +26,9 @@ open class CommonTitleCell: CommonButtonCell {
             return
         }
         self.titleLabel.text = viewModel.title
-        self.titleLabel.font = viewModel.config.font.withSize(viewModel.titleSize)
-        self.titleLabel.textColor = viewModel.titleColor
-        self.titleLabel.textAlignment = viewModel.titleAlignment
+        self.titleLabel.font = viewModel.config.font.withSize(viewModel.config.titleSize)
+        self.titleLabel.textColor = viewModel.config.titleColor
+        self.titleLabel.textAlignment = viewModel.config.titleAlignment
     }
     
     open override func setup() {

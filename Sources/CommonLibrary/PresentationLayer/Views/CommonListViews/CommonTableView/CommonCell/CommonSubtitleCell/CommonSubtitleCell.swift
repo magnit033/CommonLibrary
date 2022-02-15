@@ -28,12 +28,12 @@ open class CommonSubtitleCell: CommonButtonCell {
         }
         
         self.titleLabel.text = viewModel.title
-        self.titleLabel.textColor = viewModel.titleColor
+        self.titleLabel.textColor = viewModel.config.titleColor
         self.titleLabel.numberOfLines = viewModel.titleLines
         self.titleLabel.font = viewModel.config.font.withSize(15)
         
         self.subtitleLabel.text = viewModel.subtitle
-        self.subtitleLabel.textColor = viewModel.subtitleColor
+        self.subtitleLabel.textColor = viewModel.config.subtitleColor
         self.subtitleLabel.font = viewModel.config.font.withSize(14)
     }
     

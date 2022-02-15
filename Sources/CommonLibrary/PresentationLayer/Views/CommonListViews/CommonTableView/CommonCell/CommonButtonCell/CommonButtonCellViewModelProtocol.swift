@@ -10,6 +10,5 @@ import UIKit
 public protocol CommonButtonCellViewModelProtocol {
     
     var buttonTitle: String { get }
-    var buttonTitleColor: UIColor { get }
     
 }

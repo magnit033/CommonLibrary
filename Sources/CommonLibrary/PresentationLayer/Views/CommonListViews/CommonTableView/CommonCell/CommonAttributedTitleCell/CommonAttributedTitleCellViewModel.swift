@@ -20,7 +20,6 @@ open class CommonAttributedTitleCellViewModel: CommonButtonCellViewModel, Common
         self.title = title
         super.init(object: object)
         
-        self.separatorColor = separatorColor
         self.cellHeight = height
     }
     

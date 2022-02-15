@@ -19,11 +19,14 @@ open class CommonCollectionItemViewModel: CommonCollectionItemViewModelProtocol 
     
     public var object: CommonTableCellObjects?
     
+    open var config: CommonConfig {
+        return CommonConfig()
+    }
+    
     open var identifier: String {
         return ""
     }
     
-    public var rightSeparatorColor: UIColor = UIColor.clear
     public var itemWidth: CGFloat = 60
     public var itemHeight: CGFloat = 60
 }

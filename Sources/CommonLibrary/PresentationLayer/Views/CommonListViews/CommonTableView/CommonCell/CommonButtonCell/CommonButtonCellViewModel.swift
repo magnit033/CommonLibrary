@@ -13,9 +13,8 @@ open class CommonButtonCellViewModel: CommonTableCellViewModel, CommonButtonCell
     
     // MARK: - Lifecycle
     
-    public init(title: String = " ", titleColor: UIColor = UIColor.systemBlue, height: CGFloat = 60, object: CommonTableCellObjects? = nil) {
+    public init(title: String = " ", height: CGFloat = 60, object: CommonTableCellObjects? = nil) {
         self.buttonTitle = title
-        self.buttonTitleColor = titleColor
         super.init(object: object)
         
         self.cellHeight = height
@@ -24,7 +23,6 @@ open class CommonButtonCellViewModel: CommonTableCellViewModel, CommonButtonCell
     // MARK: - CommonThemeCellViewModelProtocol
     
     public var buttonTitle: String
-    public var buttonTitleColor: UIColor
     
     // MARK: - Override
     

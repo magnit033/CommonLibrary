@@ -60,7 +60,7 @@ open class CommonTableCell: UITableViewCell, CommonTableCellViewModelDelegate {
             return
         }
         viewModel.delegate = self
-        self.separatorCell.backgroundColor = viewModel.separatorColor
+        self.separatorCell.backgroundColor = viewModel.config.separatorColor
         self.heightConstraint?.constant = viewModel.cellHeight
     }
     

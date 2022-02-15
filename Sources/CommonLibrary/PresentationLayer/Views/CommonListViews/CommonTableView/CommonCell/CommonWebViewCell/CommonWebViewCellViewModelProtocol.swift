@@ -10,4 +10,5 @@ import Foundation
 public protocol CommonWebViewCellViewModelProtocol {
     
     var url: URL? { get }
+    
 }

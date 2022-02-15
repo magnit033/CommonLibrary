@@ -18,7 +18,6 @@ open class CommonWebViewCellViewModel: CommonTableCellViewModel, CommonWebViewCe
         self.url = URL(string: urlString)
         super.init(object: object)
         
-        self.separatorColor = separatorColor
         self.cellHeight = height
     }
     

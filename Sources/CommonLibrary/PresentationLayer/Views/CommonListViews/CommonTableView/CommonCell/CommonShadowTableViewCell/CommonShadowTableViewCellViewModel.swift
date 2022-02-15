@@ -27,7 +27,4 @@ open class CommonShadowTableViewCellViewModel: CommonTableViewCellViewModel, Com
     
     // MARK: - CommonShadowTableViewCellViewModelProtocol
     
-    open var backgrounColor: UIColor {
-        return UIColor.white
-    }
 }
