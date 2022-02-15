@@ -27,10 +27,6 @@ open class BaseViewModel: BaseViewModelProtocol, NotificationServiceListener {
         return CommonConfig()
     }
     
-    open var backGroundColor: UIColor {
-        return UIColor.white
-    }
-    
     open func navigationTitle() -> String? {
         return nil
     }

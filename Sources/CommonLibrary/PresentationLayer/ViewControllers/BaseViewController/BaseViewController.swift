@@ -70,7 +70,7 @@ open class BaseViewController: UIViewController, BaseViewModelDelegate {
     open func updateView() {
         
         self.setupTabBar()
-        self.view.backgroundColor = self.viewModel?.backGroundColor
+        self.view.backgroundColor = self.viewModel?.config.backgroundColor
     }
     
     open func setupView() {
