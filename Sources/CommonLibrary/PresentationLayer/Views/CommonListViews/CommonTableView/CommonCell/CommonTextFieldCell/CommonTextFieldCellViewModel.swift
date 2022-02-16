@@ -35,6 +35,7 @@ open class CommonTextFieldCellViewModel: CommonTableCellViewModel, CommonTextFie
     public var returnType: UIReturnKeyType = .default
     public var languageCode: String = Locale.current.languageCode ?? "ru"
     public var keyboardType: UIKeyboardType = .default
+    public var autocorrectionType: UITextAutocorrectionType = .yes
     
     open func open() {
         self.selfDelegate?.open()

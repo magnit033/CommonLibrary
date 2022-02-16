@@ -61,9 +61,11 @@ open class CommonTextFieldCell: CommonTableCell, CommonTextViewDelegate, CommonT
             return
         }
         
+        
         let config = CommonTextViewConfig(placeHolder: viewModel.placeHolder,
                                           keyboardType: viewModel.keyboardType,
                                           returnKeyType: viewModel.returnType,
+                                          autocorrectionType: viewModel.autocorrectionType,
                                           languageCode: viewModel.languageCode)
         self.textField.viewModel = CommonTextViewModel(config: config, text: viewModel.text)
         self.textField.delegate = self
