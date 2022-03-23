@@ -12,6 +12,8 @@ open class CommonTableViewModel: CommonTableViewModelProtocol {
     
     // MARK: - Properties
     
+    public let services = Services.shared
+    
     private let cellViewModels: [CommonTableCellViewModel]
     
     // MARK: - Lifecycle
