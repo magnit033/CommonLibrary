@@ -17,6 +17,7 @@ open class CommonCollectionView: UICollectionView,
     
     public var viewModel: CommonCollectionViewModelProtocol? {
         didSet {
+            self.registerCells()
             self.reload()
         }
     }
@@ -85,6 +86,11 @@ open class CommonCollectionView: UICollectionView,
     
     // MARK: - Private
     
+    private func updateView() {
+        guard let viewModel = viewModel else {
+            return
+        }
+    }
     
     private func reload() {
         
@@ -102,7 +108,14 @@ open class CommonCollectionView: UICollectionView,
         self.alwaysBounceVertical = false
         self.alwaysBounceHorizontal = false
         
-        self.register(CommonTableViewItem.self, forCellWithReuseIdentifier: CommonTableViewItem.identifier)
-        
+    }
+    
+    private func registerCells() {
+        guard let viewModel = viewModel else {
+            return
+        }
+        viewModel.items().forEach({ key, value in
+            self.register(value, forCellWithReuseIdentifier: key)
+        })
     }
 }

@@ -26,6 +26,10 @@ open class CommonCollectionItemViewModel: CommonCollectionItemViewModelProtocol 
         return ""
     }
     
+    open var type: CommonCollectionItem.Type {
+        return CommonCollectionItem.self
+    }
+    
     public var itemWidth: CGFloat = 60
     public var itemHeight: CGFloat = 60
 }

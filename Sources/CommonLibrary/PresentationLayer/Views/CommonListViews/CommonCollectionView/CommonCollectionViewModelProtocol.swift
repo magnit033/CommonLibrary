@@ -11,4 +11,6 @@ public protocol CommonCollectionViewModelProtocol {
     
     func numberOfItems() -> Int
     func itemViewModel(indexPath: IndexPath) -> CommonCollectionItemViewModel?
+    
+    func items() -> [String: CommonCollectionItem.Type]
 }

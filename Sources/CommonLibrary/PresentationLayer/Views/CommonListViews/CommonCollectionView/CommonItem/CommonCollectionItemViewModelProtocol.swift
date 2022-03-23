@@ -13,6 +13,7 @@ public protocol CommonCollectionItemViewModelProtocol {
     var config: CommonConfig { get }
     
     var identifier: String { get }
+    var type: CommonCollectionItem.Type { get }
     
     var itemWidth: CGFloat { get }
     var itemHeight: CGFloat { get }

@@ -11,7 +11,6 @@ open class CommonCollectionViewModel: CommonCollectionViewModelProtocol {
     
     // MARK: - Private
     
-    private let itemViewModels: [CommonCollectionItemViewModel]
     
     // MARK: - Lifecycle
     
@@ -20,6 +19,8 @@ open class CommonCollectionViewModel: CommonCollectionViewModelProtocol {
     }
 
     // MARK: - CommonCollectionViewModelProtocol
+    
+    open var itemViewModels: [CommonCollectionItemViewModel]
     
     open func numberOfItems() -> Int {
         return self.itemViewModels.count
@@ -30,5 +31,13 @@ open class CommonCollectionViewModel: CommonCollectionViewModelProtocol {
             return nil
         }
         return self.itemViewModels[indexPath.item]
+    }
+    
+    public func items() -> [String: CommonCollectionItem.Type] {
+        var result: [String: CommonCollectionItem.Type] = [:]
+        self.itemViewModels.forEach({ itemViewModel in
+            result[itemViewModel.identifier] = itemViewModel.type
+        })
+        return result
     }
 }
