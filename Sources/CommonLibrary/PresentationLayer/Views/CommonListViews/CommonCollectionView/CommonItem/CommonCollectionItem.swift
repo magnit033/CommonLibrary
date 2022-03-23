@@ -9,6 +9,8 @@ import UIKit
 
 open class CommonCollectionItem: UICollectionViewCell {
     
+    // MARK: - Properties
+    
     class open var identifier: String {
         return "CommonCollectionItem"
     }

@@ -9,6 +9,10 @@ import UIKit
 
 open class CommonCollectionItemViewModel: CommonCollectionItemViewModelProtocol {
     
+    // MARK: - Properties
+    
+    public let services = Services.shared
+    
     // MARK: - Lifecycle
     
     public init(config: CommonConfig,
