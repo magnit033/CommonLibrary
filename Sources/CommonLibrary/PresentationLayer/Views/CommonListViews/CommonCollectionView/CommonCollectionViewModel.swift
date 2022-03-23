@@ -11,6 +11,7 @@ open class CommonCollectionViewModel: CommonCollectionViewModelProtocol {
     
     // MARK: - Private
     
+    public let services = Services.shared
     
     // MARK: - Lifecycle
     
