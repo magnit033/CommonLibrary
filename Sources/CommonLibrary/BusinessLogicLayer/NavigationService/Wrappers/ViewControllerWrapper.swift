@@ -21,7 +21,7 @@ open class ViewControllerWrapper {
     
     // MARK: - To Override
     
-    public var embededViewController: UIViewController? {
+    open var embededViewController: UIViewController? {
         let navVC = UINavigationController(rootViewController: viewController)
         navVC.modalPresentationStyle = .fullScreen
         navVC.setNavigationBarHidden(false, animated: false)
