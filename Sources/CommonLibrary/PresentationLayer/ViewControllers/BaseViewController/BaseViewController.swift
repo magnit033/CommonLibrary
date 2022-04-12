@@ -42,7 +42,12 @@ open class BaseViewController: UIViewController, BaseViewModelDelegate {
     
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.viewModel?.handleViewWillAppear()
+        
+        guard let viewModel = viewModel else {
+            return
+        }
+        viewModel.handleViewWillAppear()
+        self.navigationController?.setNavigationBarHidden(viewModel.config.navigationBarIsHidder, animated: false)
     }
     
     open override func viewDidAppear(_ animated: Bool) {

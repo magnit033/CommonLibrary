@@ -24,7 +24,6 @@ open class ViewControllerWrapper {
     open var embededViewController: UIViewController? {
         let navVC = UINavigationController(rootViewController: viewController)
         navVC.modalPresentationStyle = .fullScreen
-        navVC.setNavigationBarHidden(false, animated: false)
         return navVC
     }
 }

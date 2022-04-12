@@ -51,4 +51,9 @@ open class CommonConfig {
     open var backgroundColor: UIColor {
         return UIColor.clear
     }
+    
+    open var navigationBarIsHidder: Bool {
+        return false
+    }
+    
 }
