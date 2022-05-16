@@ -16,6 +16,9 @@ public class CommonTextViewConfig {
     public let autocorrectionType: UITextAutocorrectionType
     public let languageCode: String
     public let font: UIFont
+    public let textColor: UIColor
+    public let placeHolderColor: UIColor
+    public let keyboardAppearance: UIKeyboardAppearance
     
     // MARK: - Lifecycle
     
@@ -25,7 +28,10 @@ public class CommonTextViewConfig {
                 returnKeyType: UIReturnKeyType = .default,
                 autocorrectionType: UITextAutocorrectionType = .yes,
                 languageCode: String = "en",
-                font: UIFont = .systemFont(ofSize: 17)) {
+                font: UIFont = .systemFont(ofSize: 17),
+                textColor: UIColor,
+                placeHolderColor: UIColor,
+                keyboardAppearance: UIKeyboardAppearance) {
         
         self.placeHolder = placeHolder
         self.keyboardType = keyboardType
@@ -34,5 +40,8 @@ public class CommonTextViewConfig {
         self.autocorrectionType = autocorrectionType
         self.languageCode = languageCode
         self.font = font
+        self.textColor = textColor
+        self.placeHolderColor = placeHolderColor
+        self.keyboardAppearance = keyboardAppearance
     }
 }

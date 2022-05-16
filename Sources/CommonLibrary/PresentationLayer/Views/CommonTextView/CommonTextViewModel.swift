@@ -11,8 +11,6 @@ public class CommonTextViewModel: CommonTextViewModelProtocol {
     
     // MARK: - Properties
     
-    private let config: CommonTextViewConfig
-    
     // MARK: - Lifecycle
     
     public init(config: CommonTextViewConfig, text: String) {
@@ -24,25 +22,6 @@ public class CommonTextViewModel: CommonTextViewModelProtocol {
     // MARK: - CommonTextFieldViewModelProtocol
     
     public var text: String
-    public var placeHolder: String {
-        return self.config.placeHolder
-    }
-    public var keyboardType: UIKeyboardType {
-        return self.config.keyboardType
-    }
-    public var autocapitalizationType: UITextAutocapitalizationType {
-        return self.config.autocapitalizationType
-    }
-    public var returnKeyType: UIReturnKeyType {
-        return self.config.returnKeyType
-    }
-    public var autocorrectionType: UITextAutocorrectionType {
-        return self.config.autocorrectionType
-    }
-    public var languageCode: String {
-        return config.languageCode
-    }
-    public var font: UIFont {
-        return config.font
-    }
+    public let config: CommonTextViewConfig
+    
 }

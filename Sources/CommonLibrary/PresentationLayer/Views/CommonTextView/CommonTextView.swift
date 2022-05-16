@@ -11,9 +11,6 @@ import UIKit
 public class CommonTextView: UIView, CommonTextViewProtocol, UITextFieldDelegate {
 
     // MARK: - Properties
-
-    private let kDarkTextColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-    private let kLightTextColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
     
     private let textField: CommonTextField = CommonTextField()
     private let placeHolderLabel: UILabel = UILabel()
@@ -47,18 +44,22 @@ public class CommonTextView: UIView, CommonTextViewProtocol, UITextFieldDelegate
                 return
             }
             self.textField.text = viewModel.text
-            self.textField.keyboardType = viewModel.keyboardType
-            self.textField.autocapitalizationType = viewModel.autocapitalizationType
-            self.textField.returnKeyType = viewModel.returnKeyType
-            self.textField.autocorrectionType = viewModel.autocorrectionType
-            self.textField.languageCode = viewModel.languageCode
-            self.textField.font = viewModel.font
+            self.textField.keyboardType = viewModel.config.keyboardType
+            self.textField.autocapitalizationType = viewModel.config.autocapitalizationType
+            self.textField.returnKeyType = viewModel.config.returnKeyType
+            self.textField.autocorrectionType = viewModel.config.autocorrectionType
+            self.textField.languageCode = viewModel.config.languageCode
+            self.textField.font = viewModel.config.font
+            self.textField.textColor = viewModel.config.textColor
+            self.textField.keyboardAppearance = viewModel.config.keyboardAppearance
             
-            self.placeHolderLabel.text = viewModel.placeHolder
-            self.placeHolderLabel.font = viewModel.font
+            self.placeHolderLabel.text = viewModel.config.placeHolder
+            self.placeHolderLabel.font = viewModel.config.font
+            self.placeHolderLabel.textColor = viewModel.config.placeHolderColor
             
-            self.topPlaceHolderLabel.font = viewModel.font.withSize(14)
-            self.topPlaceHolderLabel.text = viewModel.placeHolder
+            self.topPlaceHolderLabel.font = viewModel.config.font.withSize(14)
+            self.topPlaceHolderLabel.text = viewModel.config.placeHolder
+            self.topPlaceHolderLabel.textColor = viewModel.config.placeHolderColor
             
             self.setRelevantState(animated: false)
         }
@@ -118,7 +119,10 @@ public class CommonTextView: UIView, CommonTextViewProtocol, UITextFieldDelegate
     }
     
     private func removeWarning() {
-        self.topPlaceHolderLabel.textColor = kLightTextColor
+        guard let viewModel = viewModel else {
+            return
+        }
+        self.topPlaceHolderLabel.textColor = viewModel.config.placeHolderColor
     }
     
     private func setRelevantState(animated: Bool) {
@@ -141,7 +145,6 @@ public class CommonTextView: UIView, CommonTextViewProtocol, UITextFieldDelegate
         
         self.addSubview(textField)
         self.textField.delegate = self
-        self.textField.textColor = kDarkTextColor
         self.textField.borderStyle = UITextField.BorderStyle.roundedRect
         self.textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         
@@ -152,7 +155,6 @@ public class CommonTextView: UIView, CommonTextViewProtocol, UITextFieldDelegate
         self.textField.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         
         self.addSubview(self.placeHolderLabel)
-        self.placeHolderLabel.textColor = kLightTextColor
         
         self.placeHolderLabel.translatesAutoresizingMaskIntoConstraints = false
         self.placeHolderLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
@@ -161,7 +163,6 @@ public class CommonTextView: UIView, CommonTextViewProtocol, UITextFieldDelegate
         self.placeHolderLabel.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.66).isActive = true
         
         self.addSubview(self.topPlaceHolderLabel)
-        self.topPlaceHolderLabel.textColor = kLightTextColor
         
         self.topPlaceHolderLabel.translatesAutoresizingMaskIntoConstraints = false
         self.topPlaceHolderLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 6).isActive = true
