@@ -40,10 +40,15 @@ open class CommonRadioButtonCell: CommonButtonCell {
             return
         }
         self.titleLabel.text = viewModel.title
-        self.rightTitleLabel.text = viewModel.rightTitle
-        
         self.titleLabel.font = viewModel.config.font.withSize(viewModel.config.titleSize)
+        self.titleLabel.textColor = viewModel.config.titleColor
+        
+        self.rightTitleLabel.text = viewModel.rightTitle
+        self.rightTitleLabel.textColor = viewModel.config.subtitleColor
         self.rightTitleLabel.font = viewModel.config.font.withSize(viewModel.config.subtitleSize)
+    
+        
+        
         self.updateImageView()
     }
     
@@ -92,6 +97,6 @@ open class CommonRadioButtonCell: CommonButtonCell {
         }
         let kCircle = UIImage(systemName: "circle", withConfiguration: UIImage.SymbolConfiguration(weight: .regular))?.withRenderingMode(.alwaysOriginal)
         let kCircleFill = UIImage(systemName: "circle.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .regular))?.withRenderingMode(.alwaysOriginal)
-        self.cellImageView.image = viewModel.isSelected ? kCircleFill?.withTintColor(UIColor.systemBlue) : kCircle?.withTintColor(UIColor.systemBlue)
+        self.cellImageView.image = viewModel.isSelected ? kCircleFill?.withTintColor(viewModel.config.titleColor) : kCircle?.withTintColor(viewModel.config.titleColor)
     }
 }
