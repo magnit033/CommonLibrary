@@ -101,6 +101,7 @@ open class CommonTableView: UITableView,
         self.tableFooterView = UIView()
         self.delegate = self
         self.dataSource = self
+        self.keyboardDismissMode = .interactive
     
     }
     
