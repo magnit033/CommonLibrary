@@ -67,6 +67,7 @@ open class CommonTextFieldCell: CommonTableCell, CommonTextViewDelegate, CommonT
                                           returnKeyType: viewModel.returnType,
                                           autocorrectionType: viewModel.autocorrectionType,
                                           languageCode: viewModel.languageCode,
+                                          font: viewModel.config.font,
                                           textColor: viewModel.config.titleColor,
                                           placeHolderColor: viewModel.config.subtitleColor,
                                           keyboardAppearance: viewModel.keyboardAppearance,

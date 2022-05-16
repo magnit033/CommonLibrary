@@ -49,14 +49,14 @@ public class CommonTextView: UIView, CommonTextViewProtocol, UITextFieldDelegate
             self.textField.returnKeyType = viewModel.config.returnKeyType
             self.textField.autocorrectionType = viewModel.config.autocorrectionType
             self.textField.languageCode = viewModel.config.languageCode
-            self.textField.font = viewModel.config.font
+            self.textField.font = viewModel.config.font.withSize(17)
             self.textField.textColor = viewModel.config.textColor
             self.textField.keyboardAppearance = viewModel.config.keyboardAppearance
             self.textField.backgroundColor = viewModel.config.placeholderBackground
             self.textField.tintColor = viewModel.config.tintColor
             
             self.placeHolderLabel.text = viewModel.config.placeHolder
-            self.placeHolderLabel.font = viewModel.config.font
+            self.placeHolderLabel.font = viewModel.config.font.withSize(17)
             self.placeHolderLabel.textColor = viewModel.config.placeHolderColor
             
             self.topPlaceHolderLabel.font = viewModel.config.font.withSize(14)
