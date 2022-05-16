@@ -69,7 +69,8 @@ open class CommonTextFieldCell: CommonTableCell, CommonTextViewDelegate, CommonT
                                           languageCode: viewModel.languageCode,
                                           textColor: viewModel.config.titleColor,
                                           placeHolderColor: viewModel.config.subtitleColor,
-                                          keyboardAppearance: viewModel.keyboardAppearance)
+                                          keyboardAppearance: viewModel.keyboardAppearance,
+                                          placeholderBackground: viewModel.placeHolderBackground)
         self.textField.viewModel = CommonTextViewModel(config: config, text: viewModel.text)
         self.textField.delegate = self
     }

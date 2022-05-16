@@ -37,6 +37,7 @@ open class CommonTextFieldCellViewModel: CommonTableCellViewModel, CommonTextFie
     public var keyboardType: UIKeyboardType = .default
     public var autocorrectionType: UITextAutocorrectionType = .yes
     public var keyboardAppearance: UIKeyboardAppearance = UIKeyboardAppearance.default
+    public var placeHolderBackground: UIColor = UIColor.white
     
     open func open() {
         self.selfDelegate?.open()

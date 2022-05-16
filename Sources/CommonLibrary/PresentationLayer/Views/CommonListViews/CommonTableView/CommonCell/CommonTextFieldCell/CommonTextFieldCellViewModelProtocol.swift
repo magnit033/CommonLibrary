@@ -16,6 +16,7 @@ public protocol CommonTextFieldCellViewModelProtocol {
     var keyboardType: UIKeyboardType { get }
     var autocorrectionType: UITextAutocorrectionType { get }
     var keyboardAppearance: UIKeyboardAppearance { get }
+    var placeHolderBackground: UIColor { get }
     
     func close()
 }
