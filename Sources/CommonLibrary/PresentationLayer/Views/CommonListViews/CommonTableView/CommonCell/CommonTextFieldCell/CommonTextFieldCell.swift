@@ -70,7 +70,8 @@ open class CommonTextFieldCell: CommonTableCell, CommonTextViewDelegate, CommonT
                                           textColor: viewModel.config.titleColor,
                                           placeHolderColor: viewModel.config.subtitleColor,
                                           keyboardAppearance: viewModel.keyboardAppearance,
-                                          placeholderBackground: viewModel.placeHolderBackground)
+                                          placeholderBackground: viewModel.placeHolderBackground,
+                                          tintColor: viewModel.tintColor)
         self.textField.viewModel = CommonTextViewModel(config: config, text: viewModel.text)
         self.textField.delegate = self
     }

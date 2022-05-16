@@ -20,6 +20,7 @@ public class CommonTextViewConfig {
     public let placeHolderColor: UIColor
     public let keyboardAppearance: UIKeyboardAppearance
     public let placeholderBackground: UIColor
+    public let tintColor: UIColor
     
     // MARK: - Lifecycle
     
@@ -33,7 +34,8 @@ public class CommonTextViewConfig {
                 textColor: UIColor,
                 placeHolderColor: UIColor,
                 keyboardAppearance: UIKeyboardAppearance,
-                placeholderBackground: UIColor) {
+                placeholderBackground: UIColor,
+                tintColor: UIColor) {
         
         self.placeHolder = placeHolder
         self.keyboardType = keyboardType
@@ -46,5 +48,6 @@ public class CommonTextViewConfig {
         self.placeHolderColor = placeHolderColor
         self.keyboardAppearance = keyboardAppearance
         self.placeholderBackground = placeholderBackground
+        self.tintColor = tintColor
     }
 }

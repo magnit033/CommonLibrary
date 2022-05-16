@@ -53,6 +53,7 @@ public class CommonTextView: UIView, CommonTextViewProtocol, UITextFieldDelegate
             self.textField.textColor = viewModel.config.textColor
             self.textField.keyboardAppearance = viewModel.config.keyboardAppearance
             self.textField.backgroundColor = viewModel.config.placeholderBackground
+            self.textField.tintColor = viewModel.config.tintColor
             
             self.placeHolderLabel.text = viewModel.config.placeHolder
             self.placeHolderLabel.font = viewModel.config.font
