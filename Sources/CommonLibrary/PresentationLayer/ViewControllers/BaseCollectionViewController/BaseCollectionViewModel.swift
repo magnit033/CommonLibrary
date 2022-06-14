@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class BaseCollectionViewModel: BaseViewModel, BaseCollectionViewModelProtocol {
+open class BaseCollectionViewModel: BaseViewModel, BaseCollectionViewModelProtocol {
     
     // MARK: - Properties
     
