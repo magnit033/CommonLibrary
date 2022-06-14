@@ -29,7 +29,7 @@ public class BaseCollectionViewController: BaseViewController, CommonListViewDel
     // MARK: - Override
     
     open override func initView() {
-//        self.collectionView = CommonCollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
+        self.collectionView = CommonCollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
     }
     
     open override func updateView() {
@@ -40,7 +40,7 @@ public class BaseCollectionViewController: BaseViewController, CommonListViewDel
     // MARK: - CommonListViewDelegate
     
     public func didSelectCell(object: Any?) {
-        
+        selfViewModel?.didSelect(object: object)
     }
     
     // MARK: - NewPhotoListViewModelDelegate
@@ -53,18 +53,18 @@ public class BaseCollectionViewController: BaseViewController, CommonListViewDel
     
     private func setupCollectionView() {
         
-//        guard let collectionView = self.collectionView,
-//              #available(iOS 11.0, *) else {
-//            return
-//        }
-//
-//        self.view.addSubview(collectionView)
-//        collectionView.listViewDelegate = self
-//        collectionView.translatesAutoresizingMaskIntoConstraints = false
-//        collectionView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-//        collectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-//        collectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-//        collectionView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        guard let collectionView = self.collectionView,
+              #available(iOS 11.0, *) else {
+            return
+        }
+
+        self.view.addSubview(collectionView)
+        collectionView.listViewDelegate = self
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        collectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        collectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
     
     }
     
@@ -72,6 +72,6 @@ public class BaseCollectionViewController: BaseViewController, CommonListViewDel
         guard let selfViewModel = selfViewModel else {
             return
         }
-//        self.collectionView?.viewModel = CommonCollectionViewModel(itemViewModels: selfViewModel.cellViewModels)
+        self.collectionView?.viewModel = CommonCollectionViewModel(itemViewModels: selfViewModel.cellViewModels)
     }
 }
