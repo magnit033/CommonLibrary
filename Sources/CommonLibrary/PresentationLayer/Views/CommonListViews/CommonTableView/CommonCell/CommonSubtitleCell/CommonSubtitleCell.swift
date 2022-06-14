@@ -15,8 +15,8 @@ open class CommonSubtitleCell: CommonButtonCell {
         return "CommonSubtitleCell"
     }
     
-    private let titleLabel = UILabel()
-    private let subtitleLabel = UILabel()
+    public let titleLabel = UILabel()
+    public let subtitleLabel = UILabel()
     
     // MARK: - Override
     
