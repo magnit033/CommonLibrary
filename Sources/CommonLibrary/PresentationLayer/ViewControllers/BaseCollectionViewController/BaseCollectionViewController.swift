@@ -29,7 +29,7 @@ public class BaseCollectionViewController: BaseViewController, CommonListViewDel
     // MARK: - Override
     
     open override func initView() {
-        self.collectionView = CommonCollectionView()
+        self.collectionView = CommonCollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
     }
     
     open override func updateView() {
