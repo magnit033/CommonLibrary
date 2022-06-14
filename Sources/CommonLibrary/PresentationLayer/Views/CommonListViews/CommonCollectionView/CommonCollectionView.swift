@@ -87,9 +87,9 @@ open class CommonCollectionView: UICollectionView,
     // MARK: - Private
     
     private func updateView() {
-        guard let viewModel = viewModel else {
-            return
-        }
+//        guard let viewModel = viewModel else {
+//            return
+//        }
     }
     
     private func reload() {
