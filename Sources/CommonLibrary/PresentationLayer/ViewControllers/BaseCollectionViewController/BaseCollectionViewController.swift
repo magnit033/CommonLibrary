@@ -61,10 +61,10 @@ public class BaseCollectionViewController: BaseViewController, CommonListViewDel
         self.view.addSubview(collectionView)
         collectionView.listViewDelegate = self
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        collectionView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 1).isActive = true
         collectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-        collectionView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -1).isActive = true
     
     }
     
